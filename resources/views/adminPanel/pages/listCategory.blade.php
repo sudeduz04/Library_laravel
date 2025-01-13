@@ -24,11 +24,11 @@
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{$category->name}}</strong></td>
                                 <td>{{$category->created_at}}</td>
-{{--                                <td>{{$category->updated_at}}</td>--}}
-{{--                                <td>--}}
-{{--                                    <a href="{{route('panel.updateCategory', $category->id)}}" class="btn btn-sm btn-info">Güncelle</a>--}}
-{{--                                    <a href="{{route('panel.deleteCategory', $category->id)}}" class ="btn btn-sm btn-danger">Sil</a>--}}
-{{--                                </td>--}}
+                                <td>{{$category->updated_at}}</td>
+                                <td>
+                                    <a href="{{route('panel.updateCategory', $category->id)}}" class="btn btn-sm btn-info">Güncelle</a>
+                                    <a href="{{route('panel.deleteCategory', $category->id)}}" class ="btn btn-sm btn-danger">Sil</a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

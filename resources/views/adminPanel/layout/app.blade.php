@@ -151,10 +151,17 @@
 
             <ul class="menu-inner py-1">
                 <!-- Kategoriler -->
-                <li class="menu-item active">
+                <li class="menu-item">
                     <a href="{{route('panel.listCategory')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Analytics">Kategoriler</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+
+                <a href="{{route('panel.listBook')}}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                        <div data-i18n="Analytics">Kitaplar</div>
                     </a>
                 </li>
             </ul>
@@ -179,13 +186,7 @@
                     <!-- Search -->
                     <div class="navbar-nav align-items-center">
                         <div class="nav-item d-flex align-items-center">
-                            <i class="bx bx-search fs-4 lh-0"></i>
-                            <input
-                                type="text"
-                                class="form-control border-0 shadow-none"
-                                placeholder="Search..."
-                                aria-label="Search..."
-                            />
+
                         </div>
                     </div>
                     <!-- /Search -->
@@ -216,37 +217,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <div class="dropdown-divider"></div>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="bx bx-user me-2"></i>
-                                        <span class="align-middle">My Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="bx bx-cog me-2"></i>
-                                        <span class="align-middle">Settings</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="dropdown-divider"></div>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="auth-login-basic.html">
-                                        <i class="bx bx-power-off me-2"></i>
-                                        <span class="align-middle">Log Out</span>
-                                    </a>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <span class="align-middle">Log Out</span>
+                                        </button>
+                                    </form>
                                 </li>
                             </ul>
                         </li>
